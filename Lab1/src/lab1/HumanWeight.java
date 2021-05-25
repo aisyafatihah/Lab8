@@ -1,7 +1,7 @@
 package lab1;
 
 public class HumanWeight {
-	private double weightInEarth;
+	private double weightInEarth=49.9;
 	private double weightInMars;
 	
 	public double getWeightInEarth(){
@@ -18,7 +18,7 @@ public class HumanWeight {
 		}
 	
 	public void calculateWeight(){
-	weightInMars = getWeightInEarth()*3.711;
+	weightInMars = getWeightInEarth() * 3.711;
 	}
 
 

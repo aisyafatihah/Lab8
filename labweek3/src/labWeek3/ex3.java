@@ -1,40 +1,33 @@
-package labw3;
-
-/**
- * This program demonstrate the application of output stream that processed data as raw bytes.
- * The data is stored in a file.
- * 
- * @author emalianakasmuri
- * 
- */
-
+package labWeek3;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class OutputStreamDemo {
+public class ex3 {
 
 	public static void main(String[] args) {
 		
 		
 		// Declaration of target storage
-		String targetStorage = "demo1.dat";
+		String targetStorage1 = "bin1.dat";
+		String targetStorage2="bin2.dat";
 		
 		// Declaration of output stream object
 		FileOutputStream fileOutputStream;
-		
-		System.out.println("Generate binary data");
+		FileOutputStream fileOutputStream1;
 		
 		try {
 			
 			// Create an output stream between this file and data.dat
-			fileOutputStream = new FileOutputStream(targetStorage);
+			fileOutputStream = new FileOutputStream(targetStorage1);
+			fileOutputStream1 = new FileOutputStream(targetStorage2);
 			
 			// Write three characters 
-			fileOutputStream.write(65);
+			fileOutputStream.write(64);
+			fileOutputStream1.write(65);
 			
 			fileOutputStream.flush();
-						
+			
 			// Close the stream
 			fileOutputStream.close();  
 	         
@@ -44,9 +37,7 @@ public class OutputStreamDemo {
 		}  
 		
 		// Indicate end of program - Could be succcessful
-		System.out.println("End of program.");
-		System.out.println("Right click on labWeek3. Select Refresh.");
-		System.out.println(targetStorage + " should be there. Check it out!");   
+		System.out.println("End of program.  Check the files "); //+ targetStorage);   
 	}
 
 }
